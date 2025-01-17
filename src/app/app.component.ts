@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SideBarComponent } from './core/layouts/side-bar/side-bar.component';
+import { FooterBarComponent } from './core/layouts/footer-bar/footer-bar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SideBarComponent],
+  imports: [RouterOutlet, SideBarComponent, FooterBarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
