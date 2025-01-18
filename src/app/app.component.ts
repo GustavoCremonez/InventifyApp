@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SideBarComponent } from './core/layouts/side-bar/side-bar.component';
+import { AuthService } from './core/services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,9 @@ import { SideBarComponent } from './core/layouts/side-bar/side-bar.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'InventifyApp';
+  private readonly _authService: AuthService = inject(AuthService);
+
+  isLoggedIn(): boolean {
+    return this._authService.isAuthenticatedUser();
+  }
 }

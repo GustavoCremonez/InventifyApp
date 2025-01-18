@@ -1,4 +1,6 @@
 <main class="flex gap-2 bg-gray-100">
+  @if (isLoggedIn()) {
   <app-side-bar></app-side-bar>
+  }
   <router-outlet></router-outlet>
 </main>
