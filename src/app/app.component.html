@@ -1,4 +1,4 @@
-<main class="flex gap-2 bg-gray-100">
+<main [ngClass]="{ 'flex gap-2 bg-gray-100': isLoggedIn() }">
   @if (isLoggedIn()) {
   <app-side-bar></app-side-bar>
   }

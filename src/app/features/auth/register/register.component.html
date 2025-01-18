@@ -1,1 +1,100 @@
-<p>register works!</p>
+<main
+  class="w-screen h-screen flex items-center justify-center bg-gradient-to-r from-sky-400 to-sky-600"
+>
+  <section
+    class="w-[30rem] min-h-[30rem] backdrop-blur shadow rounded-lg p-4 flex flex-col items-center justify-center bg-slate-950 text-white"
+  >
+    <lucide-icon size="34" name="log-in"></lucide-icon>
+    <h1 class="font-bold text-xl">Entrar com e-mail</h1>
+    <p class="text-center my-8">
+      Gerencie estoque, produtos, pedidos, clientes. Tudo com auxílio de uma IA.
+      De graça
+    </p>
+
+    <form class="w-full">
+      <div class="relative z-0 w-full mb-5 group">
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-sky-500 focus:outline-none focus:ring-0 focus:border-sky-600 peer"
+          placeholder=" "
+          required
+        />
+        <label
+          for="name"
+          class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-sky-600 peer-focus:dark:text-sky-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          >Nome</label
+        >
+      </div>
+      <div class="relative z-0 w-full mb-5 group">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-sky-500 focus:outline-none focus:ring-0 focus:border-sky-600 peer"
+          placeholder=" "
+          required
+        />
+        <label
+          for="email"
+          class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-sky-600 peer-focus:dark:text-sky-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          >E-mail</label
+        >
+      </div>
+      <div class="flex flex-col items-start relative z-0 w-full mb-5 group">
+        <input
+          [type]="passwordType"
+          name="password"
+          id="password"
+          class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-sky-500 focus:outline-none focus:ring-0 focus:border-sky-600 peer"
+          placeholder=" "
+          required
+        />
+        <label
+          for="password"
+          class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-sky-600 peer-focus:dark:text-sky-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          >Senha</label
+        >
+        <lucide-icon
+          class="cursor-pointer hover:text-sky-400 absolute top-2 right-0"
+          size="20"
+          [name]="passwordIcon"
+          (click)="togglePasswordVisibility()"
+        ></lucide-icon>
+      </div>
+      <div class="flex flex-col items-start relative z-0 w-full mb-12 group">
+        <input
+          [type]="confirmPasswordType"
+          name="confirm-password"
+          id="confirm-password"
+          class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-sky-500 focus:outline-none focus:ring-0 focus:border-sky-600 peer"
+          placeholder=" "
+          required
+        />
+        <label
+          for="confirm-password"
+          class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-sky-600 peer-focus:dark:text-sky-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          >Confirmar Senha</label
+        >
+        <lucide-icon
+          class="cursor-pointer hover:text-sky-400 absolute top-2 right-0"
+          size="20"
+          [name]="confirmPasswordIcon"
+          (click)="toggleConfirmPasswordVisibility()"
+        ></lucide-icon>
+      </div>
+      <button
+        class="uppercase text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-sky-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800"
+      >
+        Registrar
+      </button>
+      <p class="mt-4 text-sm text-gray-600 dark:text-gray-400">
+        Já possui uma conta?
+        <a class="text-sky-600 dark:text-sky-500" [routerLink]="['/login']"
+          >Entre agora</a
+        >
+      </p>
+    </form>
+  </section>
+</main>
