@@ -1,16 +1,72 @@
 <aside
-  class="w-32 h-screen flex flex-col justify-between border-r border-r-red-500 p-4 bg-gray-200"
+  class="w-14 hover:w-44 h-screen flex flex-col justify-between border-r py-4 bg-black shadow-md text-white group/bar transition-all"
 >
-  <ul class="list-none flex flex-col items-start">
-    <li class="">Início</li>
-    <li>Estoque</li>
-    <li>Produtos</li>
-    <li>Pedidos</li>
-    <li>Clientes</li>
+  <ul class="flex flex-col items-start">
+    <li
+      class="h-12 p-4 flex items-center gap-2 font-semibold cursor-pointer hover:bg-slate-900 w-full transition duration-300"
+    >
+      <lucide-icon size="18" name="home"></lucide-icon>
+      <p class="hidden group-hover/bar:block transition-all duration-700">
+        Início
+      </p>
+    </li>
+    <li
+      class="h-12 p-4 flex items-center gap-2 font-semibold cursor-pointer hover:bg-slate-900 w-full transition duration-300"
+    >
+      <lucide-icon size="18" name="box"></lucide-icon>
+      <p class="hidden group-hover/bar:block transition-all duration-700">
+        Estoque
+      </p>
+    </li>
+    <li
+      class="h-12 p-4 flex items-center gap-2 font-semibold cursor-pointer hover:bg-slate-900 w-full transition duration-300"
+    >
+      <lucide-icon size="18" name="barcode"></lucide-icon>
+      <p class="hidden group-hover/bar:block transition-all duration-700">
+        Produtos
+      </p>
+    </li>
+    <li
+      class="h-12 p-4 flex items-center gap-2 font-semibold cursor-pointer hover:bg-slate-900 w-full transition duration-300"
+    >
+      <lucide-icon size="18" name="shopping-basket"></lucide-icon>
+      <p class="hidden group-hover/bar:block transition-all duration-700">
+        Pedidos
+      </p>
+    </li>
+    <li
+      class="h-12 p-4 flex items-center gap-2 font-semibold cursor-pointer hover:bg-slate-900 w-full transition duration-300"
+    >
+      <lucide-icon size="18" name="users-round"></lucide-icon>
+      <p class="hidden group-hover/bar:block transition-all duration-700">
+        Clientes
+      </p>
+    </li>
   </ul>
-  <ul class="list-none flex flex-col items-start">
-    <li>Relatórios</li>
-    <li>Configurações</li>
-    <li>Sair</li>
+  <ul class="flex flex-col items-start">
+    <li
+      class="h-12 p-4 flex items-center gap-2 font-semibold cursor-pointer hover:bg-slate-900 w-full transition duration-300"
+    >
+      <lucide-icon size="18" name="scroll-text"></lucide-icon>
+      <p class="hidden group-hover/bar:block transition-all duration-700">
+        Relatórios
+      </p>
+    </li>
+    <li
+      class="h-12 p-4 flex items-center gap-2 font-semibold cursor-pointer hover:bg-slate-900 w-full transition duration-300"
+    >
+      <lucide-icon size="18" name="bolt"></lucide-icon>
+      <p class="hidden group-hover/bar:block transition-all duration-700">
+        Configurações
+      </p>
+    </li>
+    <li
+      class="h-12 p-4 flex items-center gap-2 font-semibold cursor-pointer hover:bg-slate-900 w-full transition duration-300"
+    >
+      <lucide-icon size="18" name="log-out"></lucide-icon>
+      <p class="hidden group-hover/bar:block transition-all duration-700">
+        Sair
+      </p>
+    </li>
   </ul>
 </aside>

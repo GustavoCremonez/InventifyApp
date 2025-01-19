@@ -1,5 +1,7 @@
-<main class="flex gap-y-2">
+<main [ngClass]="{ 'flex gap-2 bg-gray-100': isLoggedIn() }">
+  @if (isLoggedIn()) {
   <app-side-bar></app-side-bar>
+  }
   <div class="flex flex-col min-h-screen w-full">
     <div class="flex-grow ml-2">
       <router-outlet></router-outlet>
