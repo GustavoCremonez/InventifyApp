@@ -11,8 +11,8 @@ export class AuthService {
     this.isAuthenticated = !!localStorage.getItem('token');
   }
 
-  login(username: string, password: string): boolean | string {
-    if (username === 'cremonez' && password === '123') {
+  login(email: string, password: string): boolean | string {
+    if (email === 'teste@email.com' && password === '123456') {
       const authToken =
         'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpheWRlZXAgUGF0aWwiLCJpYXQiOjE1MTYyMzkwMjJ9.yt3EOXf60R62Mef2oFpbFh2ihkP5qZ4fM8bjVnF8YhA';
       localStorage.setItem(this.authSecretKey, authToken);
